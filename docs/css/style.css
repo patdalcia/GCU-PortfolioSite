@@ -1,0 +1,21 @@
+.parallax {
+  /* The image used */
+  background-image: url("./images/resizedLogo.png");
+  background-color: black;
+
+  /* Set a specific height */
+  min-height: 870px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contentDiv{
+	height: 1000px;
+	background-color: red;
+	font-size: 36px;
+}
+
