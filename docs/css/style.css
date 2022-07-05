@@ -90,6 +90,10 @@ section{
     padding-top: 30px;
     line-height: 1.8;
 }
+.container div {
+	padding-top: 30px;
+    line-height: 1.8;
+}
 
 .appNameText {
 	color: gold;
