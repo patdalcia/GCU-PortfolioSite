@@ -41,19 +41,48 @@
                 <p>
                     This project was made as a <a href="https://www.gcu.edu/">Grand Canyon University</a>(GCU) senior project. The author of this application, and this portfolio site, is Patrick Vidal Garcia. The creation of the 
 					<text class="appNameText">Organized</text> app, and its necessary documentation, were created over the span of two courses: CST-451, and CST-452. This portfolio site is used to display the final application state,
-					and provide details into its design, and development. To reference any documentation for this project, please refer to the documentation folder of the github repo.
+					and provide details into its design, and development. To see all documentation for this project, please refer to the <a href="https://github.com/patdalcia/GCU-PortfolioSite/tree/main/documentation">documentation folder of the github repo.</a>
                 </p>
                 <p>
-                    Adipisci amet aut sint voluptates delectus aperiam? Veniam ab illum enim in libero nihil culpa explicabo perspiciatis veritatis non repellendus architecto excepturi nostrum porro voluptatem aperiam animi asperiores, a voluptatibus temporibus minima voluptas ipsa! Recusandae nostrum, aut, voluptates est error iusto, eaque excepturi soluta quas maiores amet.
+                    The modern student faces many challenges. Balancing school, work, and life is no easy task. For this to properly be accomplished, students must get organized. While traditional organizational tactics, 
+					like day planners, calendars, etc., are effective for some students. Others may opt for a more digital approach. There are a litany of applications that offer organizational tools. However, many of these 
+					applications are not free, or are simply bloated with unnecessary features. Students must be provided with a clear and simple UI,  and clearly outlined and useful features to encourage them to actually utilize 
+					the app for its intended purposes.  
+                </p>
+				<p>
+                    It is the aim of this project to create a tool that students may use to help them organize their schoolwork to ensure nothing falls through the cracks. As stated in the previous paragraph, there are many tools already 
+					on the market for organizing daily events, and even schoolwork. However I felt their interfaces and features resulted in an unpleasant user experience, that eventually led to the application being removed from my devices 
+					unused. Taking inspiration from the Grand Canyon University LoudCloud portal, this application will display a student's upcoming assignment clearly, and even provide alerts when due dates are close. Students can add course 
+					details, and past courses will be automatically organized to provide easy access for later use. Simplicity and function are the key points here. As someone who has a hard time committing themselves to organizational 
+					tools, I aim to create something that even I will love using.  
+                </p>
+            </div>
+			<div class="container">
+                <h3>Design Details</h3>
+                <p>
+                    <text class="appNameText">Organized</text> was built using the Windows Presentation Framework(WPF). This framework utilizes a combination of C# and XAML to create responsive desktop applications. The goal of this app, 
+					is to create an application that can operate on a users computer without the need for an internet connection. This meant that webapps were out, and a desktop application would be the correct route. I narrowed down my options 
+					to three popular frameworks: WPF, Swing, and Electron JS. While all powerful choices, I opted for WPF, mainley due to my familiarity with the framework aquired through previous courses. There are other benefits that made WPF 
+					the correct choice, mainly its Data Binding capabilites, and its hierarchical GUI strucutures. WPF is also an established and well documented framework, making it the ideal choice for my app.
+                </p>
+                <p>
+                    Using WPF, this app was created following the Model View ViewModel (MVVM) pattern. A model is created (ex. Course.cs, Assignment.cs) to store object data. This object data is then used to update View Models (CourseViewModel.cs, AssignmentViewModel.cs)
+					, classes that are used as data sources for the View layers GUI elements. Because the View layers GUI elements are bound to a View Model, any changes made to either the View Model, or the controls that are bound to them, are automatically
+					reflected in the GUI elements. This results in fast and responsive layouts, that are perfect for storing the kind of data needed for this app.
+                </p>
+				<p>
+                    Speaking of data, the original intentions of this application were to store Course and User data within a relational database (ex. SQL). Due to time-constraints and poor planning-ironic when developing an app that improves organization-
+					the data of this application is instead stored locally within JSON encoded files. This app does not need to store large amounts of data, and the data itself is simple Course and Assignment details that do not need to be secured yet.
+					Futire iterations of this app will include more robust data security, most likely involving a SQL database. User authentication will also be included to allow for additional user settings and information, while securing said information. 					
                 </p>
             </div>
 			<div class="container">
                 <h3>Design Documents</h3>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores harum veritatis nemo magni odio reprehenderit atque, esse animi porro suscipit vero nobis modi quis. Exercitationem quasi beatae, assumenda officia illum sunt. Cum voluptas maiores vitae eius hic inventore deleniti placeat perferendis quam ut nostrum maxime optio voluptatibus ab laboriosam, quia consectetur atque minus?
+                    To access the documentation for this project, including design diagrams and code snippets, please visit the <a href="https://github.com/patdalcia/GCU-PortfolioSite/tree/main/documentation">documentation folder of the github repo.</a>
                 </p>
                 <p>
-                    Adipisci amet aut sint voluptates delectus aperiam? Veniam ab illum enim in libero nihil culpa explicabo perspiciatis veritatis non repellendus architecto excepturi nostrum porro voluptatem aperiam animi asperiores, a voluptatibus temporibus minima voluptas ipsa! Recusandae nostrum, aut, voluptates est error iusto, eaque excepturi soluta quas maiores amet.
+                    
                 </p>
             </div>
         </section>
