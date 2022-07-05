@@ -42,6 +42,10 @@ header::before {
 
 
 header div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
   position: absolute;
   z-index: 1;
   top: 50%;
