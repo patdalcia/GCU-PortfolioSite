@@ -76,18 +76,27 @@ section{
 .container {
     margin: auto; /* To center the text horizontally */
     max-width: 1000px; /* Limiting the width for extra large screens */
+	min-height: 30vw;
     padding: 80px 40px;
 }
 .container h3 {
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 700;
     font-size: 3.15rem;
-    color: gold;
+    color: #f9ed05;
     opacity: 0.75;
 }
 .container p {
     padding-top: 30px;
     line-height: 1.8;
+}
+
+.appNameText {
+	color: gold;
+	font-size: 1.25em;
+    font-weight: bold;
+	margin-right: 5px;
+	margin-left: 5px;
 }
 
 /* Animated Scroll Down Arrow Stylings */
