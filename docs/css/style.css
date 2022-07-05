@@ -31,7 +31,7 @@ header::before {
     content: "";
     position: absolute;
     top: 0;
-    left: 700px;
+    left: 600px;
     right: 0;
     bottom: 0;
     display: block;
@@ -72,6 +72,25 @@ section{
     z-index: 2;
 }
 
+.navBarDiv{
+    display: flex;
+    justify-content: right;
+    align-items:end;
+    
+	min-width: 80%;
+    min-height: 5vw;
+    height: 10vw;
+    background-color: white;
+	position: absolute;
+	top: 0;
+    right: 10vw;
+    left: 10vw;
+    margin-top: -10vw;
+    padding: 30px;
+}
+.navBarDiv h3 {
+    color: gold;
+}
 
 .container {
     margin: auto; /* To center the text horizontally */
