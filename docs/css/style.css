@@ -312,4 +312,19 @@ footer {
   .wrapper ul li a{
     font-size: 10px;
   }
+  header div h1{
+    font-size: 50px;
+  }
+  header div h2{
+    font-size: 25px;
+  }
+  header div h3{
+    font-size: 20px;
+  }
+}
+
+@media (max-height: 500px) {
+  header div {
+    top: 100%;
+  }
 }
