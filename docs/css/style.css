@@ -307,6 +307,9 @@ footer {
   .wrapper ul li a{
     font-size: 20px;
   }
+  header {
+    min-height: 85vh;
+  }
 }
 @media (max-width: 600px) {
   .wrapper ul li a{
