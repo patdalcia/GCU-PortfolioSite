@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Parallax Effect using Pure CSS</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto+Condensed:wght@300;700&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" href="css/style.css" />
     </head>
@@ -12,10 +13,17 @@
             <div>
                 <h1>Organized</h1>
                 <h2>A Project portfolio for CST-452</h2>
-				<h3>By Patrick Garcia</h3>
+				<h3>By Patrick Garcia</h3>				
             </div>
+			<a class="scrollDownLink" href="#content">
+				<div class="arrow">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</a>
         </header>
-        <section>
+        <section id='content'>
 			<div class="container">
                 <h3>Project Overview</h3>
                 <p>
@@ -45,4 +53,12 @@
             </div>
         </section>
     </body>
+	
+	<script>
+		$('a').click(function() {
+			$('html, body').animate({
+				scrollTop: $($(this).attr('href')).offset().top}, 500);
+				return false;
+		});
+	</script>
 </html>
