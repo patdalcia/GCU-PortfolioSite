@@ -1,122 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Organized - Portfolio Site</title>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto+Condensed:wght@300;700&display=swap" rel="stylesheet"> 
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/style.css" />
-    </head>
-    <body>
-        <header>
-            <div>
-                <h1>Organized</h1>
-                <h2>A Project portfolio for CST-452</h2>
-				<h3>By Patrick Garcia</h3>				
-            </div>
-			<a class="scrollDownLink" href="#content">
-				<div class="arrow">
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-			</a>
-        </header>
-		
-		<input type="checkbox" id="active">
-			<label for="active" class="menu-btn"><i class="fa fa-bars"></i></label>
-			<div class="wrapper">
-				<ul>
-					<li><a href="#">Home</a></li>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Services</a></li>
-					<li><a href="#">Gallery</a></li>
-					<li><a href="#">Feedback</a></li>
-				</ul>
-			</div>
-		
-        <section id='content'>
-			<div class="container">
-                <h3>Project Overview</h3>
-                <p>
-                    <text class="appNameText">Organized</text> is an organizational tool made for students, by a student. 
-                </p>
-                <p>
-                    Inspired by online University Portals, <text class="appNameText">Organized</text> aims to provide students with a central dashboard where their Course information can be easily viewed and organized.	
-                </p>
-				<p>
-                    Course and Assignment detials at a glance. Automatically groups assignments that are due soon. All displayed in a simple and easy to use Interface that streamlines the organizational process. 
-                </p>
-            </div>
-			<div class="container">
-                <h3>Background</h3>
-                <p>
-                    This project was made as a <a href="https://www.gcu.edu/">Grand Canyon University</a>(GCU) senior project. The author of this application, and this portfolio site, is Patrick Vidal Garcia. The creation of the 
-					<text class="appNameText">Organized</text> app, and its necessary documentation, were created over the span of two courses: CST-451, and CST-452. This portfolio site is used to display the final application state,
-					and provide details into its design, and development. To see all documentation for this project, please refer to the <a href="https://github.com/patdalcia/GCU-PortfolioSite/tree/main/documentation">documentation folder of the github repo.</a>
-                </p>
-                <p>
-                    The modern student faces many challenges. Balancing school, work, and life is no easy task. For this to properly be accomplished, students must get organized. While traditional organizational tactics, 
-					like day planners, calendars, etc., are effective for some students. Others may opt for a more digital approach. There are a litany of applications that offer organizational tools. However, many of these 
-					applications are not free, or are simply bloated with unnecessary features. Students must be provided with a clear and simple UI,  and clearly outlined and useful features to encourage them to actually utilize 
-					the app for its intended purposes.  
-                </p>
-				<p>
-                    It is the aim of this project to create a tool that students may use to help them organize their schoolwork to ensure nothing falls through the cracks. As stated in the previous paragraph, there are many tools already 
-					on the market for organizing daily events, and even schoolwork. However I felt their interfaces and features resulted in an unpleasant user experience, that eventually led to the application being removed from my devices 
-					unused. Taking inspiration from the Grand Canyon University LoudCloud portal, this application will display a student's upcoming assignment clearly, and even provide alerts when due dates are close. Students can add course 
-					details, and past courses will be automatically organized to provide easy access for later use. Simplicity and function are the key points here. As someone who has a hard time committing themselves to organizational 
-					tools, I aim to create something that even I will love using.  
-                </p>
-            </div>
-			<div class="container">
-                <h3>Design Details</h3>
-                <p>
-                    <text class="appNameText">Organized</text> was built using the Windows Presentation Framework(WPF). This framework utilizes a combination of C# and XAML to create responsive desktop applications. The goal of this app, 
-					is to create an application that can operate on a users computer without the need for an internet connection. This meant that webapps were out, and a desktop application would be the correct route. I narrowed down my options 
-					to three popular frameworks: WPF, Swing, and Electron JS. While all powerful choices, I opted for WPF, mainley due to my familiarity with the framework aquired through previous courses. There are other benefits that made WPF 
-					the correct choice, mainly its Data Binding capabilites, and its hierarchical GUI strucutures. WPF is also an established and well documented framework, making it the ideal choice for my app.
-                </p>
-                <p>
-                    Using WPF, this app was created following the Model View ViewModel (MVVM) pattern. A model is created (ex. Course.cs, Assignment.cs) to store object data. This object data is then used to update View Models (CourseViewModel.cs, AssignmentViewModel.cs)
-					, classes that are used as data sources for the View layers GUI elements. Because the View layers GUI elements are bound to a View Model, any changes made to either the View Model, or the controls that are bound to them, are automatically
-					reflected in the GUI elements. This results in fast and responsive layouts, that are perfect for storing the kind of data needed for this app.
-                </p>
-				<p>
-                    Speaking of data, the original intentions of this application were to store Course and User data within a relational database (ex. SQL). Due to time-constraints and poor planning-ironic when developing an app that improves organization-
-					the data of this application is instead stored locally within JSON encoded files. This app does not need to store large amounts of data, and the data itself is simple Course and Assignment details that do not need to be secured yet.
-					Future iterations of this app will include more robust data security, most likely involving a SQL database. User authentication will also be included to allow for additional user settings and information, while securing said information. 					
-                </p>
-				<p>
-                    To run this application, simply download the files from <a href="https://github.com/patdalcia/GCU-PortfolioSite/tree/main/documentation">the github repo.</a> Navigate to SeniorProject > Organized > Organized > bin > Release > Net6.0-windows > Organized.exe	
-                </p>
-            </div>
-			<div class="container">
-                <h3>Resources</h3>
-				<p>
-                    To download this project, please visit <a href="https://github.com/patdalcia/GCU-PortfolioSite/">the GitHub repository.</a>
-                </p>
-                <p>
-                    To access the documentation for this project, including design diagrams and code snippets, please visit the <a href="https://github.com/patdalcia/GCU-PortfolioSite/tree/main/documentation">documentation folder of the github repo.</a>
-                </p>
-				<p>
-                    After reviewing the documentation for this app, please refer to the screen-capture video below for a demonstration of the app. 
-                </p>
-				<div style="position: relative; padding-bottom: 30vw; height: 0; margin-top: 8vw;">
-					<iframe src="https://www.loom.com/embed/10663035ab694d05a2d17398c4fdf0f5" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-					</iframe>
-				</div>
-            </div>
-        </section>
-    </body>
-	
-	<script>
-		$('a').click(function() {
-			$('html, body').animate({
-				scrollTop: $($(this).attr('href')).offset().top}, 500);
-				return false;
-		});
-	</script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Organized - Portfolio Site</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto+Condensed:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>Organized</h1>
+        <h2>A Project portfolio for CST-452</h2>
+        <h3>By Patrick Garcia</h3>
+      </div>
+      <a class="scrollDownLink" href="#content">
+        <div class="arrow">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </a>
+    </header>
+
+    <input type="checkbox" id="active" />
+    <label for="active" class="menu-btn"><i class="fa fa-bars"></i></label>
+    <div class="wrapper">
+      <ul>
+        <li><a href="#projectOverviewContainer">Project Overview</a></li>
+        <li><a href="#backgroundContainer">Background</a></li>
+        <li><a href="#designDetailsContainer">Design Details</a></li>
+        <li><a href="#resourcesContainer">Resources</a></li>
+        <li><a href="#">Feedback</a></li>
+      </ul>
+    </div>
+
+    <section id="content">
+      <div class="container" id="projectOverviewContainer">
+        <h3>Project Overview</h3>
+        <p>
+          <text class="appNameText">Organized</text> is an organizational tool
+          made for students, by a student.
+        </p>
+        <p>
+          Inspired by online University Portals,
+          <text class="appNameText">Organized</text> aims to provide students
+          with a central dashboard where their Course information can be easily
+          viewed and organized.
+        </p>
+        <p>
+          Course and Assignment detials at a glance. Automatically groups
+          assignments that are due soon. All displayed in a simple and easy to
+          use Interface that streamlines the organizational process.
+        </p>
+      </div>
+      <div class="container" id="backgroundContainer">
+        <h3>Background</h3>
+        <p>
+          This project was made as a
+          <a href="https://www.gcu.edu/">Grand Canyon University</a>(GCU) senior
+          project. The author of this application, and this portfolio site, is
+          Patrick Vidal Garcia. The creation of the
+          <text class="appNameText">Organized</text> app, and its necessary
+          documentation, were created over the span of two courses: CST-451, and
+          CST-452. This portfolio site is used to display the final application
+          state, and provide details into its design, and development. To see
+          all documentation for this project, please refer to the
+          <a
+            href="https://github.com/patdalcia/GCU-PortfolioSite/tree/main/documentation"
+            >documentation folder of the github repo.</a
+          >
+        </p>
+        <p>
+          The modern student faces many challenges. Balancing school, work, and
+          life is no easy task. For this to properly be accomplished, students
+          must get organized. While traditional organizational tactics, like day
+          planners, calendars, etc., are effective for some students. Others may
+          opt for a more digital approach. There are a litany of applications
+          that offer organizational tools. However, many of these applications
+          are not free, or are simply bloated with unnecessary features.
+          Students must be provided with a clear and simple UI, and clearly
+          outlined and useful features to encourage them to actually utilize the
+          app for its intended purposes.
+        </p>
+        <p>
+          It is the aim of this project to create a tool that students may use
+          to help them organize their schoolwork to ensure nothing falls through
+          the cracks. As stated in the previous paragraph, there are many tools
+          already on the market for organizing daily events, and even
+          schoolwork. However I felt their interfaces and features resulted in
+          an unpleasant user experience, that eventually led to the application
+          being removed from my devices unused. Taking inspiration from the
+          Grand Canyon University LoudCloud portal, this application will
+          display a student's upcoming assignment clearly, and even provide
+          alerts when due dates are close. Students can add course details, and
+          past courses will be automatically organized to provide easy access
+          for later use. Simplicity and function are the key points here. As
+          someone who has a hard time committing themselves to organizational
+          tools, I aim to create something that even I will love using.
+        </p>
+      </div>
+      <div class="container" id="designDetailsContainer">
+        <h3>Design Details</h3>
+        <p>
+          <text class="appNameText">Organized</text> was built using the Windows
+          Presentation Framework(WPF). This framework utilizes a combination of
+          C# and XAML to create responsive desktop applications. The goal of
+          this app, is to create an application that can operate on a users
+          computer without the need for an internet connection. This meant that
+          webapps were out, and a desktop application would be the correct
+          route. I narrowed down my options to three popular frameworks: WPF,
+          Swing, and Electron JS. While all powerful choices, I opted for WPF,
+          mainley due to my familiarity with the framework aquired through
+          previous courses. There are other benefits that made WPF the correct
+          choice, mainly its Data Binding capabilites, and its hierarchical GUI
+          strucutures. WPF is also an established and well documented framework,
+          making it the ideal choice for my app.
+        </p>
+        <p>
+          Using WPF, this app was created following the Model View ViewModel
+          (MVVM) pattern. A model is created (ex. Course.cs, Assignment.cs) to
+          store object data. This object data is then used to update View Models
+          (CourseViewModel.cs, AssignmentViewModel.cs) , classes that are used
+          as data sources for the View layers GUI elements. Because the View
+          layers GUI elements are bound to a View Model, any changes made to
+          either the View Model, or the controls that are bound to them, are
+          automatically reflected in the GUI elements. This results in fast and
+          responsive layouts, that are perfect for storing the kind of data
+          needed for this app.
+        </p>
+        <p>
+          Speaking of data, the original intentions of this application were to
+          store Course and User data within a relational database (ex. SQL). Due
+          to time-constraints and poor planning-ironic when developing an app
+          that improves organization- the data of this application is instead
+          stored locally within JSON encoded files. This app does not need to
+          store large amounts of data, and the data itself is simple Course and
+          Assignment details that do not need to be secured yet. Future
+          iterations of this app will include more robust data security, most
+          likely involving a SQL database. User authentication will also be
+          included to allow for additional user settings and information, while
+          securing said information.
+        </p>
+        <p>
+          To run this application, simply download the files from
+          <a
+            href="https://github.com/patdalcia/GCU-PortfolioSite/tree/main/documentation"
+            >the github repo.</a
+          >
+          Navigate to SeniorProject > Organized > Organized > bin > Release >
+          Net6.0-windows > Organized.exe
+        </p>
+      </div>
+      <div class="container" id="resourcesContainer">
+        <h3>Resources</h3>
+        <p>
+          To download this project, please visit
+          <a href="https://github.com/patdalcia/GCU-PortfolioSite/"
+            >the GitHub repository.</a
+          >
+        </p>
+        <p>
+          To access the documentation for this project, including design
+          diagrams and code snippets, please visit the
+          <a
+            href="https://github.com/patdalcia/GCU-PortfolioSite/tree/main/documentation"
+            >documentation folder of the github repo.</a
+          >
+        </p>
+        <p>
+          After reviewing the documentation for this app, please refer to the
+          screen-capture video below for a demonstration of the app.
+        </p>
+        <div
+          style="
+            position: relative;
+            padding-bottom: 30vw;
+            height: 0;
+            margin-top: 8vw;
+          "
+        >
+          <iframe
+            src="https://www.loom.com/embed/10663035ab694d05a2d17398c4fdf0f5"
+            frameborder="0"
+            webkitallowfullscreen
+            mozallowfullscreen
+            allowfullscreen
+            style="
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+            "
+          >
+          </iframe>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="copyrightSection">
+        &copy; 2022
+        <script>
+          new Date().getFullYear() >= 2022 &&
+            document.write("-" + new Date().getFullYear());
+        </script>
+        , Patrick Vidal Garcia.
+      </div>
+      <div class="footerLinks">
+        <div>
+          <a href="https://github.com/patdalcia/GCU-PortfolioSite"
+            ><i class="fa fa-github fa-2x iconColor"></i>
+          </a>
+        </div>
+        <div>
+          <a href="https://www.loom.com/share/10663035ab694d05a2d17398c4fdf0f5"
+            ><i class="fa fa-video-camera fa-2x iconColor"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+
+  <script>
+    $("a").click(function () {
+      $("html, body").animate(
+        {
+          scrollTop: $($(this).attr("href")).offset().top,
+        },
+        500
+      );
+      return false;
+    });
+  </script>
 </html>
