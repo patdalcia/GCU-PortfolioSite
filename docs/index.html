@@ -6,13 +6,11 @@
         <title>Organized - Portfolio Site</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto+Condensed:wght@300;700&display=swap" rel="stylesheet"> 
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/style.css" />
     </head>
     <body>
         <header>
-			<div class="navBarDiv">
-				<h3>By Patrick Garcia</h3>	
-			</div>
             <div>
                 <h1>Organized</h1>
                 <h2>A Project portfolio for CST-452</h2>
@@ -26,6 +24,19 @@
 				</div>
 			</a>
         </header>
+		
+		<input type="checkbox" id="active">
+			<label for="active" class="menu-btn"><i class="fa fa-bars"></i></label>
+			<div class="wrapper">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Services</a></li>
+					<li><a href="#">Gallery</a></li>
+					<li><a href="#">Feedback</a></li>
+				</ul>
+			</div>
+		
         <section id='content'>
 			<div class="container">
                 <h3>Project Overview</h3>
