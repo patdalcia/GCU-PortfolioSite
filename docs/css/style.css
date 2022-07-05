@@ -35,11 +35,12 @@ header::before {
   right: 0;
   bottom: 0;
   display: block;
-  background: url("images/resizedLogo.png");
   background-size: cover;
   z-index: -1;
   transform: translateZ(-4px) scale(2);
 }
+
+
 header div {
   position: absolute;
   z-index: 1;
@@ -47,6 +48,15 @@ header div {
   padding: 0 30px;
   font-family: "Roboto Condensed", sans-serif;
   transform: translateZ(-2px) scale(1.5);
+}
+header div img {
+  width: 375px;
+  position: absolute;
+  
+  top: -350px;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 header h1 {
   font-size: 5rem;
@@ -253,17 +263,6 @@ input[type="checkbox"] {
   display: none;
 }
 
-@media (max-width: 800px) {
-  .wrapper ul li a{
-    font-size: 20px;
-  }
-}
-@media (max-width: 600px) {
-  .wrapper ul li a{
-    font-size: 10px;
-  }
-}
-
 /* Footer Styles */
 footer {
   display: flex;
@@ -297,4 +296,16 @@ footer {
 
 .iconColor:hover {
   color: #f9ed05;
+}
+
+/* Media Queries for dynamic resizing of elements */
+@media (max-width: 800px) {
+  .wrapper ul li a{
+    font-size: 20px;
+  }
+}
+@media (max-width: 600px) {
+  .wrapper ul li a{
+    font-size: 10px;
+  }
 }
