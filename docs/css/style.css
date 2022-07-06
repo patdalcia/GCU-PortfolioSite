@@ -292,6 +292,7 @@ footer {
 
 .copyrightSection {
   color: #f9ed05;
+  font-size: 1em;
 }
 
 .iconColor {
@@ -312,6 +313,9 @@ footer {
   }
 }
 @media (max-width: 600px) {
+  body {
+    font-size: 15px;
+  }
   .wrapper ul li a{
     font-size: 15px;
   }
@@ -326,6 +330,9 @@ footer {
   }
   header div img {
     top: -300px;
+  }
+  .copyrightSection {
+    font-size: 0.75em;
   }
 }
 
